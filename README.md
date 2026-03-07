@@ -1,4 +1,4 @@
-<img src="./AtlasDashMainLogo.png" align="center"/>
+<img src="./AtlasDashMainLogo.png" text-align="center"/>
 
 
 **A fast-paced geography quiz game. How well do you know the world?**
