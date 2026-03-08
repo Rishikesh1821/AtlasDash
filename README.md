@@ -20,6 +20,10 @@ Whether you're studying for a geography exam, killing time, or just want to prov
 
 AtlasDash goes beyond solo play with a built-in co-op multiplayer mode. Team up with a friend or classmate and combine your geography knowledge to chase a higher score together. Designed with education in mind, AtlasDash features a dedicated Classroom System that lets an entire class compete simultaneously. Teams of two go head-to-head against other pairs in the same classroom, making it a perfect tool for teachers who want to turn a geography lesson into a competitive, engaging experience.
 
+<p align="center">
+    <img src="./Map.png" />
+<p/>
+
 
 ## How to Play
 
@@ -48,14 +52,13 @@ AtlasDash goes beyond solo play with a built-in co-op multiplayer mode. Team up 
 - Multiplayer option
 - Co-op mode
 
-## Contribute
-1. Fork this repository.
-1. Create your own branch.
-1. Commit changes.
-1. Submit a pull request.
+## Built With
 
-your code will be reviewed and request will be merged!
-
+- MongoDB
+- ExpressJS
+- NextJS
+- NodeJS
+- TailwindCSS
 
 ## Getting Started
 
@@ -72,7 +75,7 @@ cd atlasdash/server
 npm install
 
 # Run server
-node server.js
+node run server
 
 
 
@@ -90,27 +93,35 @@ npm run dev
 ## Scripts
 
 ```
-Client side 
+Client - 
     - dev: next dev
     - build: next build
     - start: next start
     - lint: eslint
 
-Server side
-    - express: ^5.2.1
-    - nodemon: ^3.1.14
+Server -
+
+    - server: nodemon server.js
+    - test: node test.js
 ```
 
 
 ## Dependencies -
 ```
+Client - 
     next: 16.1.6
     postcss: ^8.5.8
     react: 19.2.3
     react-dom: 19.2.3
+
+Server - 
+    - express: ^5.2.1
+    - nodemon: ^3.1.14
+
 ```
 ## Dev Dependencies
 ```
+Client -
     @tailwindcss/postcss: ^4.2.1
     @types/node: ^20
     @types/react: ^19
@@ -121,14 +132,15 @@ Server side
     typescript: ^5
 ```
 
-## Built With
+## Contribute
+1. Fork this repository.
+1. Create your own branch.
+1. Commit changes.
+1. Submit a pull request.
 
-- MongoDB
-- ExpressJS
-- NextJS
-- NodeJS
-- TailwindCSS
+your code will be reviewed and request will be merged!
 
+note: Please refer to the DeveloperDocumentation.md and follow the guide while contributing.
 
 ## License
 This project is licensed under the MIT License.
