@@ -91,7 +91,7 @@ cd atlasdash/server
 npm install
 
 # Run server
-node run server
+npm run server
 
 
 
