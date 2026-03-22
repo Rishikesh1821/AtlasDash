@@ -2,13 +2,15 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 
-export default function Login() {
+export default function Signup() {
   const navigate = useNavigate();
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
-  const handleJoin = () => {
-    console.log('Login clicked', { email, password });
+  const handleCreate = () => {
+    console.log('Create clicked', { username, email, password, confirmPassword });
   };
 
   return (
@@ -26,7 +28,7 @@ export default function Login() {
             color: '#1494F3',
           }}
         >
-            AtlasDash
+          AtlasDash
         </h1>
         <p
           className="text-sm"
@@ -71,8 +73,21 @@ export default function Login() {
             className="text-4xl font-bold text-gray-900 mb-2"
             style={{ fontFamily: '"Baloo Bhai 2", cursive' }}
           >
-            User Login
+            Create User
           </h2>
+
+          <input
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            className="w-80 px-5 py-3 rounded-full outline-none text-gray-700 text-sm"
+            style={{
+              backgroundColor: '#EAF4FF',
+              border: '1.5px solid #B8D9F5',
+              fontFamily: '"Inter", sans-serif',
+            }}
+          />
 
           <input
             type="email"
@@ -89,9 +104,22 @@ export default function Login() {
 
           <input
             type="password"
-            placeholder="Password"
+            placeholder="Set Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            className="w-80 px-5 py-3 rounded-full outline-none text-gray-700 text-sm"
+            style={{
+              backgroundColor: '#EAF4FF',
+              border: '1.5px solid #B8D9F5',
+              fontFamily: '"Inter", sans-serif',
+            }}
+          />
+
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
             className="w-80 px-5 py-3 rounded-full outline-none text-gray-700 text-sm"
             style={{
               backgroundColor: '#EAF4FF',
@@ -104,12 +132,12 @@ export default function Login() {
             className="text-xs"
             style={{ fontFamily: '"Inter", sans-serif' }}
           >
-            <span className="text-gray-500">Not a User yet? </span>
+            <span className="text-gray-500">Already a User? </span>
             <span
               className="text-blue-500 underline cursor-pointer hover:text-blue-700"
-              onClick={() => navigate('/Signup')}
+              onClick={() => navigate('/Login')}
             >
-              Create account
+              Go to Login
             </span>
           </p>
 
@@ -120,9 +148,9 @@ export default function Login() {
               backgroundColor: '#A2E260',
               fontFamily: '"Inter", sans-serif',
             }}
-            onClick={handleJoin}
+            onClick={handleCreate}
           >
-            Join
+            Create
           </button>
 
         </div>
