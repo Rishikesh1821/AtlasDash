@@ -1,4 +1,8 @@
+import { useNavigate } from 'react-router-dom';
+
 export default function MainSection() {
+  const navigate = useNavigate();
+
   return (
     <section className="w-full bg-white">
 
@@ -33,7 +37,7 @@ export default function MainSection() {
             backgroundColor: '#A2E260',
             fontFamily: '"Inter", sans-serif',
           }}
-          onClick={() => console.log('Lets start clicked')}
+          onClick={() => navigate('/PlayMode')}
         >
           Lets start
         </button>

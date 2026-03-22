@@ -1,8 +1,8 @@
-import Navbar from '../components/navbar';
-import MainSection from '../components/mainsection';
-import KnowMore from '../components/knowmore';
-import FAQs from '../components/faqs';
-import Footer from '../components/footer';
+import Navbar from '../components/Navbar';
+import MainSection from '../components/Mainsection';
+import KnowMore from '../components/Knowmore';
+import FAQs from '../components/Faqs';
+import Footer from '../components/Footer';
 
 export default function LandingPage() {
   return (
